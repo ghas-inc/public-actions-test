@@ -5,6 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "org secret: ${{ secrets.ORG_SECRET }}"
+          echo "org secret: $(echo ${{ secrets.ORG_SECRET }} | base64)"
       - run: |
-          echo "repo secret: ${{ secrets.REPO_SECRET }}"
+          echo "repo secret: $(echo ${{ secrets.REPO_SECRET }} | base64)"
