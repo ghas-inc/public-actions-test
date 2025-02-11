@@ -1,0 +1,11 @@
+on:
+  push:
+    branches: [main]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: Hello ${NAME}
+        env:
+          NAME: ${{ secrets.MY_REPO_SECRET }}
