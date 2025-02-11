@@ -4,5 +4,7 @@ jobs:
   secret:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "org secret: ${{ secrets.ORG_SECRET }}"
-      - run: echo "repo secret: ${{ secrets.REPO_SECRET }}"
+      - run: |
+          echo "org secret: ${{ secrets.ORG_SECRET }}"
+      - run: |
+          echo "repo secret: ${{ secrets.REPO_SECRET }}"
