@@ -1,0 +1,9 @@
+on: push
+
+jobs:
+  secret:
+    runs-on: ubuntu-latest
+    environment: main
+    steps:
+      - run: |
+          echo "env secret: ${{ secrets.ENV_SECRET }}"
